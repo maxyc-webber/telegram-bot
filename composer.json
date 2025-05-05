@@ -1,0 +1,36 @@
+{
+    "name": "maxycws/telegram-bot",
+    "description": "Telegram bot with spam detection and contact search using GigaChat",
+    "type": "library",
+    "license": "MIT",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Grechushnikov Maxim",
+            "email": "maxycws@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "vlucas/phpdotenv": "^5.3",
+        "guzzlehttp/guzzle": "^7.0",
+        "league/container": "^4.2",
+        "monolog/monolog": "^3.3",
+        "ramsey/uuid": "^4.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "phpstan/phpstan": "^1.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Maxyc\\TelegramBot\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    }
+}
