@@ -4,7 +4,7 @@ namespace Maxyc\TelegramBot\Client;
 
 use GuzzleHttp\Client;
 use Maxyc\TelegramBot\ConfigProvider;
-use Monolog\Logger;
+use Psr\Log\LoggerInterface;
 
 /**
  * Client for interacting with the Telegram Bot API.
@@ -15,14 +15,14 @@ class TelegramClient
 {
     private readonly Client $httpClient;
     private readonly string $token;
-    private readonly Logger $logger;
+    private readonly LoggerInterface $logger;
 
     /**
      * @param string $token Telegram bot token
-     * @param Logger $logger Logger instance
+     * @param LoggerInterface $logger Logger instance
      * @param ConfigProvider $config Configuration provider
      */
-    public function __construct(string $token, Logger $logger, ConfigProvider $config)
+    public function __construct(string $token, LoggerInterface $logger, ConfigProvider $config)
     {
         $this->token = $token;
         $this->logger = $logger;

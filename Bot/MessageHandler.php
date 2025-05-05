@@ -2,7 +2,7 @@
 
 namespace Maxyc\TelegramBot\Bot;
 
-use Monolog\Logger;
+use Psr\Log\LoggerInterface;
 use Maxyc\TelegramBot\Checks\SpamHandlingStrategyInterface;
 use Maxyc\TelegramBot\Checks\SpamStrategyFactory;
 use Maxyc\TelegramBot\Client\AkismetClient;
@@ -19,7 +19,7 @@ use Maxyc\TelegramBot\PromptBuilder;
  */
 class MessageHandler
 {
-    private readonly Logger $logger;
+    private readonly LoggerInterface $logger;
     private readonly GigaChatClient $gigaChat;
     private readonly ContactRequestDetector $detector;
     private readonly AkismetClient $akismet;
@@ -29,7 +29,7 @@ class MessageHandler
     private readonly PromptBuilder $promptBuilder;
 
     /**
-     * @param Logger $logger Logger instance
+     * @param LoggerInterface $logger Logger instance
      * @param GigaChatClient $gigaChat GigaChat API client
      * @param AkismetClient $akismet Akismet API client
      * @param ConfigProvider $config Configuration provider
@@ -38,7 +38,7 @@ class MessageHandler
      * @psalm-param array<string, string> $translations Translations array
      */
     public function __construct(
-        Logger $logger,
+        LoggerInterface $logger,
         GigaChatClient $gigaChat,
         AkismetClient $akismet,
         ConfigProvider $config,

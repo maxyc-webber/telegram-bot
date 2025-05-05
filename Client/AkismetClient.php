@@ -4,7 +4,7 @@ namespace Maxyc\TelegramBot\Client;
 
 use GuzzleHttp\Client;
 use Maxyc\TelegramBot\ConfigProvider;
-use Monolog\Logger;
+use Psr\Log\LoggerInterface;
 
 /**
  * Client for interacting with the Akismet API to check for spam.
@@ -16,16 +16,16 @@ class AkismetClient
     private readonly Client $httpClient;
     private readonly string $apiKey;
     private readonly string $blogUrl;
-    private readonly Logger $logger;
+    private readonly LoggerInterface $logger;
     private readonly ConfigProvider $config;
 
     /**
      * @param string $apiKey Akismet API key
      * @param string $blogUrl Blog URL associated with the API key
-     * @param Logger $logger Logger instance
+     * @param LoggerInterface $logger Logger instance
      * @param ConfigProvider $config Configuration provider
      */
-    public function __construct(string $apiKey, string $blogUrl, Logger $logger, ConfigProvider $config)
+    public function __construct(string $apiKey, string $blogUrl, LoggerInterface $logger, ConfigProvider $config)
     {
         $this->apiKey = $apiKey;
         $this->blogUrl = $blogUrl;

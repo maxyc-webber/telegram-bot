@@ -2,7 +2,7 @@
 
 namespace Maxyc\TelegramBot\Bot;
 
-use Monolog\Logger;
+use Psr\Log\LoggerInterface;
 use Maxyc\TelegramBot\Client\TelegramClient;
 use Maxyc\TelegramBot\ConfigProvider;
 
@@ -14,19 +14,19 @@ use Maxyc\TelegramBot\ConfigProvider;
 class TelegramBot
 {
     private readonly TelegramClient $telegram;
-    private readonly Logger $logger;
+    private readonly LoggerInterface $logger;
     private readonly MessageHandler $messageHandler;
     private readonly ?string $webhookSecret;
 
     /**
      * @param TelegramClient $telegram Telegram API client
-     * @param Logger $logger Logger instance
+     * @param LoggerInterface $logger Logger instance
      * @param MessageHandler $messageHandler Message handler
      * @param ConfigProvider $config Configuration provider
      */
     public function __construct(
         TelegramClient $telegram,
-        Logger $logger,
+        LoggerInterface $logger,
         MessageHandler $messageHandler,
         ConfigProvider $config
     ) {

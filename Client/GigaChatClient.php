@@ -4,7 +4,7 @@ namespace Maxyc\TelegramBot\Client;
 
 use GuzzleHttp\Client;
 use Maxyc\TelegramBot\ConfigProvider;
-use Monolog\Logger;
+use Psr\Log\LoggerInterface;
 use Ramsey\Uuid\Uuid;
 
 /**
@@ -16,7 +16,7 @@ class GigaChatClient
 {
     private readonly string $authKey;
     private readonly string $scope;
-    private readonly Logger $logger;
+    private readonly LoggerInterface $logger;
     private readonly Client $httpClient;
     private readonly ConfigProvider $config;
     private string $accessToken;
@@ -25,10 +25,10 @@ class GigaChatClient
     /**
      * @param string $authKey GigaChat auth key
      * @param string $scope GigaChat scope
-     * @param Logger $logger Logger instance
+     * @param LoggerInterface $logger Logger instance
      * @param ConfigProvider $config Configuration provider
      */
-    public function __construct(string $authKey, string $scope, Logger $logger, ConfigProvider $config)
+    public function __construct(string $authKey, string $scope, LoggerInterface $logger, ConfigProvider $config)
     {
         $this->authKey = $authKey;
         $this->scope = $scope;
