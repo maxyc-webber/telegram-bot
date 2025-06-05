@@ -20,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Maxyc\\TelegramBot\\": "src/"
+            "Maxyc\\TelegramBot\\": ""
         }
     },
     "autoload-dev": {
