@@ -18,7 +18,7 @@
 ## Возможности
 - Обнаружение спама с помощью стратегий (`warn`, `warn_delete`, `silent_delete`, `delete_ban`) с использованием `SpamHandlingStrategyInterface` и `MessageContext`.
 - Поиск контактов с настраиваемым промптом GigaChat через `GIGACHAT_PROMPT_TEMPLATE`.
-- Настраиваемые проверки сообщений через `MessageCheckerInterface`.
+- Настраиваемые проверки сообщений планируются через будущий `MessageCheckerInterface`.
 - Конфигурируемые пути, настройки API и язык через `ConfigProvider`.
 - Локализованные сообщения и логи через `translations/{language}.php`.
 - Детальное логирование и проверка подписи webhook.
