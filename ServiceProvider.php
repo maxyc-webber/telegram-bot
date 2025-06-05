@@ -6,7 +6,7 @@ use League\Container\ServiceProvider\AbstractServiceProvider;
 use Psr\Log\LoggerInterface;
 use Maxyc\TelegramBot\Bot\TelegramBot;
 use Maxyc\TelegramBot\Bot\MessageHandler;
-use Maxyc\TelegramBot\Bot\TelegramClient;
+use Maxyc\TelegramBot\Client\TelegramClient;
 use Maxyc\TelegramBot\Client\AkismetClient;
 use Maxyc\TelegramBot\Client\GigaChatClient;
 use Maxyc\TelegramBot\Checks\SpamStrategyFactory;
