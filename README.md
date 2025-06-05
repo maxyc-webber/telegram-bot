@@ -18,7 +18,7 @@ This PHP library provides a Telegram bot that:
 ## Features
 - Spam detection with strategies (warn, warn_delete, silent_delete, delete_ban) using `SpamHandlingStrategyInterface` and `MessageContext`.
 - Contact search with customizable GigaChat prompt via `GIGACHAT_PROMPT_TEMPLATE`.
-- Customizable message checkers via `MessageCheckerInterface`.
+- Customizable message checks planned via a future `MessageCheckerInterface`.
 - Configurable paths, API settings, and language via `ConfigProvider`.
 - Localized messages and logs via `translations/{language}.php`.
 - Detailed logging and webhook signature verification.
