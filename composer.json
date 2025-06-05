@@ -20,12 +20,15 @@
     },
     "autoload": {
         "psr-4": {
-            "Maxyc\\TelegramBot\\": "src/"
+            "Maxyc\\TelegramBot\\": "./"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"
         }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10"
     }
 }
